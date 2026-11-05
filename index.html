@@ -221,6 +221,12 @@
     <label for="lvl-sql">SQL</label>
     <meter id="lvl-sql" value="0.3" min="0" max="1">30%</meter>
 </p>
+
+<h3>My Skill Bar Chart</h3>
+
+<canvas id="skillChart" width="300" height="150">
+    A bar chart showing my skill levels.
+</canvas>
 </section>
 <section id="projects">
     <h2>Projects</h2>
@@ -649,6 +655,25 @@
         ctx.textAlign = "center";
         ctx.textBaseline = "middle";
         ctx.fillText("An", 60, 62);
+
+        const chart = document.getElementById('skillChart');
+        const chartCtx = chart.getContext('2d');
+
+        chartCtx.fillStyle = "#2563eb";
+        chartCtx.fillRect(20, 34, 35, 96);
+        chartCtx.fillText("C++", 37, 145);
+
+        chartCtx.fillStyle = "#16a34a";
+        chartCtx.fillRect(90, 46, 35, 84);
+        chartCtx.fillText("Python", 107, 145);
+
+        chartCtx.fillStyle = "#eab308";
+        chartCtx.fillRect(160, 70, 35, 60);
+        chartCtx.fillText("JS", 177, 145);
+
+        chartCtx.fillStyle = "#9333ea";
+        chartCtx.fillRect(230, 94, 35, 36);
+        chartCtx.fillText("SQL", 247, 145);
     </script>
   </body>
 </html>
